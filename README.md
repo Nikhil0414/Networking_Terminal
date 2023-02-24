@@ -5,11 +5,11 @@ class library to quickly and easily write programs that accomplish
 many common but unique and time saving networking tasks.
 Some of these include:
 
--help     | SHOW ALL THE AVAILABLE COMMANDS ON THIS TERMINAL
+* -help     | SHOW ALL THE AVAILABLE COMMANDS ON THIS TERMINAL
 
-newuser   | LOGIN INTO THE PROGRAM AS A NEW USER
+* newuser   | LOGIN INTO THE PROGRAM AS A NEW USER
 
-olduser   | LOGIN INTO THE PROGRAM AS AN EARLIER USER
+* olduser   | LOGIN INTO THE PROGRAM AS AN EARLIER USER
 
 logout    | LOGOUT FROM THE TERMINAL
 
@@ -84,16 +84,17 @@ Output:-
 
 
 
-Conclusion:-
 Network programming in Java is one of the topics which remains
 underrated or is seen as difficult. But in the real sense it is
 completely opposite.
+
 In fact, writing network programs in Java is designed in a way to
 make the network processing quite simple and quick.
 The Java core API includes well-designed interfaces to most network
 features. Indeed, there is very little application layer network
 software you can write in C or C++ that you can’t write more easily in
 Java.
+
 Hence this project helps to learn and take advantages of the built-in
 Networking features in Java and to make the working on the internet
 and web easier and quicker. 
