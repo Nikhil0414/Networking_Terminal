@@ -1,0 +1,231 @@
+We used MySQL for database in our project to store values and to retrieve them.
+Your MySQL connection id is 8
+Server version: 8.0.21 MySQL Community Server – GPL
+Databases can store very large numbers of records efficiently (they take up little space).
+It is very quick and easy to find information.
+It is easy to add new data and to edit or delete old data.
+Data can be searched easily
+Data can be sorted easily, for example into 'date first registered' order.
+To connect to MySQL from Java, you have to use the JDBC driver from MySQL. The
+MySQL JDBC driver is called MySQL Connector/J.
+Mysql tables:
+mysql> use imt;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_imt |
++---------------+
+| checkurl |
+| crecookie |
+| delcookie |
+| filedown |
+| groupchat |
+| help |
+| myip | 
+| new1 |
+| pgtitle |
+| reci |
+| sendmail |
+| urlinfo |
+| urlstats |
+| webip |
+| webpgsrc |
++---------------+
+15 rows in set (0.00 sec)
+mysql> select *from checkurl;
++------------------------+--------+
+| url | result |
++------------------------+--------+
+| https://www.google.com | 200 |
+| https://www.keybr.com | 200 |
++------------------------+--------+
+2 rows in set (0.00 sec)
+mysql> select *from crecookie;
++--------+---------+---------+--------+-------------+
+| name | comment | domain | maxage | hash_code |
++--------+---------+---------+--------+-------------+
+| imti | lol | integer | 2000 | 1961288663 | 
+| imtiaz | this | size | 2000 | -1181152109 |
++--------+---------+---------+--------+-------------+
+2 rows in set (0.00 sec)
+mysql> select *from delcookie;
+Empty set (0.00 sec)
+mysql> select *from filedown;
++--------------------------------------------------------------------------------------------------------------------------------+--
+------------------------------------+--------------------------------------+
+| url | location |
+location1 |
++--------------------------------------------------------------------------------------------------------------------------------+--
+------------------------------------+--------------------------------------+
+| https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Black_Clover_Volume_1_BluRay.jpg/220px-Black_Clover_Volume_1_Blu-Ray.jpg | C:UsersDELLDownloads/blackclover.jpg |
+C:UsersDELLDownloads/blackclover.jpg |
+| https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Black_Clover_vol_6.png/220pxBlack_Clover_vol_6.png | C:UsersDELLDownloads/black.jpg |
+C:UsersDELLDownloads/black.jpg |
++--------------------------------------------------------------------------------------------------------------------------------+--
+------------------------------------+--------------------------------------+
+2 rows in set (0.00 sec)
+mysql> select *from groupchat;
+Empty set (0.00 sec)
+mysql> select *from help;
++-----------+-------------------------------------------------------------+
+| key_words | works | 
++-----------+-------------------------------------------------------------+
+| checkURL | CHECK URL AND RETURNS RESULT IN THE FORM OF CODES |
+| Dreci | TO RECEIVE THE MESSAGE THROUGH NETWORKING (UDP) PORT |
+| Dsend | TO SEND THE MESSAGE THROUGH NETWORKING (UDP) PORT |
+| exit | TERMINATE CODE |
+| filedown | TO DOWNLOAD A FILE FROM THE URL AND SAVE IT INTO SYSTEM |
+| myip | generate mysystem ip and computer name |
+| pgtittle | TO VIEW THE TITTLE ON THE WEB PAGE |
+| sendmail | TO SEND A MAIL ONLY BY USING JAVA NETWORKING |
+| URLinfo | VAILDITY, PROTOCOL, HOST, PORT, PATH, FILE, QUERY, URLSTATS |
+| URLstates | data,cache,content type,p3p,server,X-frame-opt |
+| webip | generate hostname and ip fo url |
+| webpgsrc | view page source |
++-----------+-------------------------------------------------------------+
+12 rows in set (0.00 sec)
+mysql> select *from myip;
++--------------------------------+-----------------+---------------------+
+| ip | hostname | address |
++--------------------------------+-----------------+---------------------+
+| DESKTOP-R1PLUT7/192.168.31.219 | DESKTOP-R1PLUT7 | localhost/127.0.0.1 |
+| DESKTOP-R1PLUT7/192.168.31.219 | DESKTOP-R1PLUT7 | localhost/127.0.0.1 |
+| DESKTOP-R1PLUT7/192.168.31.219 | DESKTOP-R1PLUT7 | localhost/127.0.0.1 |
+| DESKTOP-R1PLUT7/192.168.31.219 | DESKTOP-R1PLUT7 | localhost/127.0.0.1 |
+| DESKTOP-R1PLUT7/192.168.31.219 | DESKTOP-R1PLUT7 | localhost/127.0.0.1 | 
++--------------------------------+-----------------+---------------------+
+5 rows in set (0.00 sec)
+mysql> select *from new1;
++----------+----------+
+| username | password |
++----------+----------+
+| imt | 123 |
+| imt | 123 |
+| imt | 123 |
++----------+----------+
+3 rows in set (0.00 sec)
+mysql> select *from pgtitle;
++------------------------+----------------+
+| url | title |
++------------------------+----------------+
+| https://www.google.com | Google |
+| https://www.keybr.com | Typingpractice |
++------------------------+----------------+
+2 rows in set (0.00 sec)
+mysql> select *from reci;
++------------+
+| msg | 
++------------+
+| jazz music |
++------------+
+1 row in set (0.00 sec)
+mysql> select *from sendmail;
++---------------------------+---------+--------------+
+| send_to | subject | msg |
++---------------------------+---------+--------------+
+| adeebm.538@gmail.com | haa | did u get it |
+| nikhilkalkhanda@gmail.com | test | are u in |
+| nikhilkalkhanda@gmail.com | hey | this |
+| nikhilkalkhanda@gmail.com | another | attempt |
+| adeebm.538@gmail.com | another | testidfd |
+| adeebm.538@gmail.com | again | try it out |
+| adeebm.538@gmail.com | verify | done |
++---------------------------+---------+--------------+
+7 rows in set (0.00 sec)
+mysql> select *from urlinfo;
++------------------------------------------------------------------------------------------------------------------------------------
+----------------------------+----------+----------------+-------------+----------------+------------------------------------------
+----------------------------------------------------------------------------------------+---------+---------------------------------
+---------------------------------------------------------------------------------------------------------+
+| urll |
+protocol | host_name | port_number | default_portno | query_string
+| path | file |
++------------------------------------------------------------------------------------------------------------------------------------
+----------------------------+----------+----------------+-------------+----------------+------------------------------------------
+----------------------------------------------------------------------------------------+---------+---------------------------------
+---------------------------------------------------------------------------------------------------------+
+| https://www.google.com
+| https | www.google.com | -1 | 443 | null
+| | |
+|
+https://www.google.com/search?q=What+is+java&rlz=1C1CHWL_enIN921IN921&oq=What+is+java
+&aqs=chrome..69i57j69i64j69i65l2j69i60.10427j0j1&sourceid=chrome&ie=UTF-8 | https |
+www.google.com | -1 | 443 |
+q=What+is+java&rlz=1C1CHWL_enIN921IN921&oq=What+is+java&aqs=chrome..69i57j69i64j69i65l2
+j69i60.10427j0j1&sourceid=chrome&ie=UTF-8 | /search |
+/search?q=What+is+java&rlz=1C1CHWL_enIN921IN921&oq=What+is+java&aqs=chrome..69i57j69i6
+4j69i65l2j69i60.10427j0j1&sourceid=chrome&ie=UTF-8 |
+| https://www.amazon.in/
+| https | www.amazon.in | -1 | 443 | null
+| / | / |
+| https://www.google.com
+| https | www.google.com | -1 | 443 | null
+| | |
+| https://www.keybr.com
+| https | www.keybr.com | -1 | 443 | null
+| | |
++------------------------------------------------------------------------------------------------------------------------------------
+----------------------------+----------+----------------+-------------+----------------+------------------------------------------
+----------------------------------------------------------------------------------------+---------+---------------------------------
+---------------------------------------------------------------------------------------------------------+
+5 rows in set (0.00 sec)
+mysql> select *from urlstats;
++--------+-------------------------------+-------------------+---------------+----------------+------------+------------+-------
+--------------------------------------------------------------------------------------------------------------------------------------
+---------+----------+------------------+-----------------+---------+---------------+----------------------------------+----------
+----+-----------------------------------------------------------------------------------------+---------------+---------------------
+------------------------------------------------------------------------------------------------------------+----------------+------
+-----------------------------------+--------+----------------------+------------+--------------------------------------------------
+----------------------+---------+------------------------------------------------------------------------+
+| date_n | date | catch_c | catch_control | content_type_n | content | p3p_n
+| p3p | server_n |
+server | x_xss_n | x_xss | x_frame | x_frame_options | set_cookie_n |
+set_cookie | set_cookie_1n | set_cookie_1 
+| accept_range_n | accept_range | vary | vary_1 | transfor_n | transfor
+| alt_svs | alt_svs_n |
++--------+-------------------------------+-------------------+---------------+----------------+------------+------------+-------
+--------------------------------------------------------------------------------------------------------------------------------------
+---------+----------+------------------+-----------------+---------+---------------+----------------------------------+----------
+----+-----------------------------------------------------------------------------------------+---------------+---------------------
+------------------------------------------------------------------------------------------------------------+----------------+------
+-----------------------------------+--------+----------------------+------------+--------------------------------------------------
+----------------------+---------+------------------------------------------------------------------------+
+| Date | Thu, 22 Oct 2020 03:39:26 GMT | Transfer-Encoding | chunked | Connection | keepalive | Set-Cookie | __cfduid=d0f03a7d9aafa56f543e0b4dc37e9afea1603337965; expires=Sat, 21-
+Nov-20 03:39:25 GMT; path=/; domain=.keybr.com; HttpOnly; SameSite=Lax; Secure | vary |
+Content-Encoding | CF-Cache-Status | DYNAMIC | cf-request-id |
+05effce8b30000ddf12739c000000001 | Expect-CT | max-age=604800, report-uri="https://reporturi.cloudflare.com/cdn-cgi/beacon/expect-ct" | Report-To |
+{"endpoints":[{"url":"https://a.nel.cloudflare.com/report?lkg-colo=35&lkgtime=1603337966"}],"group":"cf-nel","max_age":604800} | Server | cloudflare
+| CF-RAY | 5e6030ede872ddf1-SIN | alt-svc | h3-27=":443"; ma=86400, h3-28=":443"; ma=86400,
+h3-29=":443"; ma=86400 | NULL | NULL |
+| Date | Thu, 22 Oct 2020 03:39:54 GMT | Transfer-Encoding | chunked | Connection | keepalive | Set-Cookie | __cfduid=dd42707122ecc14f5905f84d889c2ea471603337994; expires=Sat, 21-
+Nov-20 03:39:54 GMT; path=/; domain=.keybr.com; HttpOnly; SameSite=Lax; Secure | Vary |
+Content-Encoding | CF-Cache-Status | DYNAMIC | cf-request-id |
+05effd59a30000dcbaf6298000000001 | Expect-CT | max-age=604800, report-uri="https://reporturi.cloudflare.com/cdn-cgi/beacon/expect-ct" | Report-To |
+{"endpoints":[{"url":"https://a.nel.cloudflare.com/report?lkg-colo=35&lkgtime=1603337995"}],"group":"cf-nel","max_age":604800} | Server | cloudflare
+| CF-RAY | 5e6031a29ebfdcba-SIN | alt-svc | h3-27=":443"; ma=86400, h3-28=":443"; ma=86400,
+h3-29=":443"; ma=86400 | NULL | NULL |
+| Date | Thu, 22 Oct 2020 03:46:16 GMT | Transfer-Encoding | chunked | Connection | keepalive | Set-Cookie | __cfduid=dd3d3791f49c7f2121341785b4b35d6971603338376; expires=Sat, 21-
+Nov-20 03:46:16 GMT; path=/; domain=.keybr.com; HttpOnly; SameSite=Lax; Secure | Vary |
+Content-Encoding | CF-Cache-Status | DYNAMIC | cf-request-id |
+05f0032b96000019e16614a000000001 | Expect-CT | max-age=604800, report-uri="https://reporturi.cloudflare.com/cdn-cgi/beacon/expect-ct" | Report-To |
+{"endpoints":[{"url":"https://a.nel.cloudflare.com/report?lkg-colo=35&lkgtime=1603338376"}],"group":"cf-nel","max_age":604800} | NEL | {"report_to":"cfnel","max_age":604800} | Server | cloudflare | CF-RAY | 5e603af28d9719e1-SIN
+| alt-svc | h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400 |
++--------+-------------------------------+-------------------+---------------+----------------+------------+------------+-------
+--------------------------------------------------------------------------------------------------------------------------------------
+---------+----------+------------------+-----------------+---------+---------------+----------------------------------+----------
+----+-----------------------------------------------------------------------------------------+---------------+---------------------
+------------------------------------------------------------------------------------------------------------+----------------+------
+-----------------------------------+--------+----------------------+------------+--------------------------------------------------
+----------------------+---------+------------------------------------------------------------------------+ 
+3 rows in set (0.00 sec)
+mysql> select *from webip;
++----------------+----------------+
+| Host_name | ip_address |
++----------------+----------------+
+| www.google.com | 172.217.163.36 |
+| www.google.com | 172.217.163.36 |
+| www.google.com | 172.217.163.36 |
+| www.amazon.com | 104.88.149.147 |
+| www.giggle.com | 23.227.38.64 |
++----------------+----------------+
+5 rows in set (0.00 sec) 
