@@ -3,7 +3,7 @@
 This project shows how we can take advantage of Java’s network
 class library to quickly and easily write programs that accomplish
 many common but unique and time saving networking tasks.
-Some of these include:
+Some of these include--
 
 * -help     | SHOW ALL THE AVAILABLE COMMANDS ON THIS TERMINAL
 
